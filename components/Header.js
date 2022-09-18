@@ -28,7 +28,8 @@ function Header() {
         </div>
 
         <div className={styles.button}>
-          <button>CONNECT</button>
+          {/* <button>CONNECT</button> */}
+          <ConnectButton />
           <RiMenu3Line size={26} onClick = {()=>{setToggleMenu(true)}} className={styles.menuLine}/>
         </div>
 

@@ -5,20 +5,45 @@ import Footer from '../components/Footer'
 import '@rainbow-me/rainbowkit/styles.css';
 import {
   apiProvider,
-  configureChains,
   getDefaultWallets,
   RainbowKitProvider,
 } from '@rainbow-me/rainbowkit';
-import { chain, createClient, WagmiProvider } from 'wagmi';
+import {chain, configureChains, createClient, WagmiConfig, } from 'wagmi';
+import { jsonRpcProvider } from "wagmi/providers/jsonRpc";
 
 
 
+
+const mumbaiChain = {
+  id: 80001,
+  name: "Mumbai Testnet",
+  network: "mumbai",
+  nativeCurrency: {
+    decimals: 18,
+    name: "Matic",
+    symbol: "MATIC",
+  },
+  rpcUrls: {
+    default: "https://rpc-mumbai.maticvigil.com",
+  },
+  blockExplorers: {
+    default: {
+      name: "PolygonScan",
+      url: "https://polygonscan.com/",
+    },
+  },
+  testnet: true,
+};
 
 const { chains, provider } = configureChains(
-  [chain.mainnet, chain.polygon, chain.polygonMumbai],
+  [mumbaiChain],
   [
-    apiProvider.alchemy(process.env.ANKR_ID),
-    apiProvider.fallback()
+    jsonRpcProvider({
+      rpc: (chain) => {
+        if (chain.id !== mumbaiChain.id) return null;
+        return { http: chain.rpcUrls.default };
+      },
+    }),
   ]
 );
 const { connectors } = getDefaultWallets({
@@ -34,13 +59,13 @@ const wagmiClient = createClient({
 function MyApp({ Component, pageProps }) {
   return (
     <>
-    <WagmiProvider client={wagmiClient}>
+    <WagmiConfig client={wagmiClient}>
       <RainbowKitProvider chains={chains}>
       <Header/>
       <Component {...pageProps} />
       <Footer/>
       </RainbowKitProvider>
-      </WagmiProvider>
+      </WagmiConfig>
     </>)
 }
 
