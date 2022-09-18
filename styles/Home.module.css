@@ -1,0 +1,220 @@
+.mainCont{
+    /* height: 100vh; */
+    margin-bottom: 4rem;
+}
+
+.main{
+    padding: 3rem 4rem;
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: row;
+}
+
+.texts{
+    font-family: 'rubik';
+    margin-top: 2rem;
+    margin-right: 7rem;
+}
+
+.texts h1{
+    font-size: 3rem;
+    /* background:linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%); */
+    background: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* font-family: "typewriter"; */
+}
+
+.texts p{
+    /* font-family: "typewriter"; */
+    font-family: "rubik";
+    font-size: 1.4rem;
+}
+
+.texts button{
+    padding: 1rem 3rem;
+    border: 1px solid #43e97b;
+    background-color: transparent;
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s ease-out;
+}
+
+.texts button:hover{
+    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+    color: black;
+}
+
+.cardContainer{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 5rem;
+    /* margin-left: 5rem;
+    margin-right: 4rem; */
+    animation: animateDown infinite 2s;
+    border-bottom: 3px solid #43e97b;
+    /* box-shadow: #43e97b; */
+}
+
+.card{
+    color: white;
+    border: 1px solid #43e97b;
+    border-radius: 5px;
+    display: flex;
+    align-items:flex-start;
+    flex-direction: column;
+    padding: 2rem; 
+    font-family: 'rubik';
+    /* margin-left: 10rem; */
+    /* max-width: 20rem; */
+    transform: rotate(-30deg);
+    /* animation: animateDown infinite 1.5s; */
+}
+
+.card h5{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+@keyframes animateDown {
+    0%, 20%, 50%, 80%, 100%{
+        transform: translateY(0);
+    }
+
+    40%{
+        transform: translateY(5px);
+    }
+
+    60%{
+        transform: translateY(3px);
+    }
+}
+
+.card>img{
+    width: 100%;
+    height:auto;
+    border-radius: 10px;
+    /* animation: animateDown infinite 1.5s; */
+}
+
+.card button{
+    background-color: white;
+    color: black;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    animation: animateDown infinite 2s;
+}
+
+.card2{
+    color: white;
+    background-color: black;
+    border: 1px solid #43e97b;
+    border-radius: 5px;
+    display: flex;
+    align-items:flex-start;
+    flex-direction: column;
+    /* position: absolute; */
+    padding: 2rem; 
+    /* z-index: -1; */
+    max-width: 25rem;
+    transform: rotate(5deg);
+}
+
+.card2 h5{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.card2>img{
+    width: 100%;
+    height:auto;
+    border-radius: 10px;
+}
+
+.card2 button{
+    background-color: white;
+    color: black;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    animation: animateDown infinite 2s;
+}
+
+.secondMain{
+    padding: 2rem 4rem;
+    height: 100vh;
+}
+
+.secondContainer{
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    margin: 1rem;
+    border-radius: 5px;
+    background: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+}
+
+
+@media screen and (max-width:1030px) {
+    .main{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0.5rem 3rem;
+    }
+
+    .texts{
+        margin-top: 0;
+    }
+
+    .cardContainer{
+        padding-top: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* margin:0 10rem; */
+    }
+
+    .texts{
+        /* font-family: 'rubik'; */
+        /* margin-top: 2rem; */
+        margin-right:0;
+    }
+
+
+    /* .card{
+        padding: 1rem;
+        display: none;
+    } */
+
+    .card2{
+        padding: 1rem;
+    }
+
+    .card p{
+        font-size: small;
+    }
+
+    .card2 p{
+        font-size: small;
+    }
+
+    .card button{
+        padding: 0.4rem 1rem;
+    }
+
+    .card2 button{
+        padding: 0.4rem 1rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .texts h1{
+        font-size: 2rem;
+    }
+
+    .texts p{
+        font-size: 1rem;
+    }
+}

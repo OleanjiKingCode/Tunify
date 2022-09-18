@@ -1,0 +1,42 @@
+.uploadMain{
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.uploadMain h1{
+    margin-bottom: 2rem;
+    font-size: 4rem;
+    background: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.uploadMain input{
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border: 1px solid white;
+}
+
+.uploadMain button{
+    padding: 1rem 2rem;
+    background-color: transparent;
+    color: white;
+    border: 1px solid #43e97b;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+}
+
+.uploadMain button:hover{
+    background: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+    color: black;
+}
+
+@media screen and (max-width:600px) {
+    .uploadMain h1{
+        font-size: 3rem;
+    }
+}
