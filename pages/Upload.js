@@ -107,6 +107,9 @@ export default function Upload(props) {
       return (
         <div className={styles.uploadMain}>
           <h1>Upload Your Own Music and Get Paid for Every Download</h1>
+          <input type="Text" placeholder="Song Title"/>
+          <input type="Text" placeholder="Genre"/>
+          <input type="number" placeholder="Price"/>
           <input type="file" accept="audio/*" />
           <button>Upload to Tunify NOW!</button>
         </div>

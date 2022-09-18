@@ -23,7 +23,7 @@ function Header() {
           <Link href="/Login" passHref><p>LOGIN</p></Link>
           <Link href="/Dashboard" passHref><p>Dashboard</p></Link>
           <Link href="/Tunes"passHref><p>Tunes</p></Link>
-          <p>Albums</p>
+          <Link href="/Album" passHref><p>Albums</p></Link>
           <Link href="/Upload" passHref><p>Upload to Tunify</p></Link>
         </div>
 
@@ -39,7 +39,7 @@ function Header() {
                  <Link href="/Login" passHref><p>LOGIN</p></Link>
                 <Link href="/Dashboard" passHref><p>Dashboard</p></Link>
                 <Link href="/Tunes"passHref><p>Tunes</p></Link>
-                <p>Albums</p>
+                <Link href="/Album" passHref><p>Albums</p></Link>
                 <Link href="/Upload" passHref><p>Upload to Tunify</p></Link>
                  {/* <button className={styles.burgerBtn}>CONNECT</button> */}
                  <ConnectButton />
