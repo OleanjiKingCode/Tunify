@@ -1,0 +1,16 @@
+{
+  "name": "tunify",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ oleanjikingcode/tunify",
+    "create-local": "graph create --node http://localhost:8020/ oleanjikingcode/tunify",
+    "remove-local": "graph remove --node http://localhost:8020/ oleanjikingcode/tunify",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 oleanjikingcode/tunify"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.31.0",
+    "@graphprotocol/graph-ts": "0.27.0"
+  }
+}

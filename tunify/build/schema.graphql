@@ -1,0 +1,26 @@
+type Song @entity {
+  id: ID!
+  Name: String! 
+  FileType: String!
+  Genre: String! 
+  OwnerId:BigInt!
+  OwnerAddress: Bytes!
+  FileLink: String!
+  Stars: BigInt!
+  Likes: BigInt!
+  Date: String!
+  StarredAddresses:[Bytes!]
+  LikesAddresses:[Bytes!]
+}
+
+type User @entity {
+  id: ID!
+  Name: String!
+  Email: String!
+  Adddress:Bytes!
+  TotalUploaded: BigInt!
+  AlbumSongs: BigInt!
+  Followers: BigInt!
+  FollowersAddresses:[Bytes!]
+  Date: String!
+}

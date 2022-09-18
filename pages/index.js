@@ -1,4 +1,5 @@
 import Head from 'next/head'
+
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import {FiMusic} from "react-icons/fi"
@@ -47,6 +48,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+       
     </div>
   )
 }
