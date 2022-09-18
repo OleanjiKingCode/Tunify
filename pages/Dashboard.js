@@ -38,13 +38,12 @@ export default function Dashboard(props) {
   const { data: signer } = useSigner();
 
   const contractWithSigner = useContract({
-    addressOrName: MemeForestAddress,
-    contractInterface: MEME.abi,
+    addressOrName: TunifyAddress,
+    contractInterface: TunifyAbi.abi,
     signerOrProvider: signer,
   });
 
   useEffect(() => {
-    PageLoad();
     checkIfAMember(props);
   }, []);
 

@@ -4,7 +4,7 @@ import { BsPlayCircleFill, BsSuitHeart } from "react-icons/bs";
 import { ImStarEmpty } from "react-icons/im";
 import TunifyAbi from "../artifacts/contracts/Tunify.sol/Tunify.json";
 import { TunifyAddress, ApiUri } from "../constant";
-import { useContract, useSigner, useAccount } from "wagmi";
+import { useContract, useSigner, useAccount, useProvider } from "wagmi";
 import { createClient } from "urql";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
@@ -52,6 +52,7 @@ const client = createClient({
 });
 
 export default function Tunes(props) {
+  console.log(props)
   const Songslength = props.songs.length;
   const { data } = useAccount();
   const person = data?.address;
@@ -98,6 +99,7 @@ export default function Tunes(props) {
   };
   const FetchSongs = async (props) => {
     let data = props.memes;
+    if (data){
     const tx = await Promise.all(
       data.map(async (i) => {
         const StarAnswer = signer
@@ -124,8 +126,9 @@ export default function Tunes(props) {
         };
         return List;
       })
-    );
+    ); 
     setsongsInfo(tx);
+    }
   };
 
   return (
@@ -147,9 +150,12 @@ export default function Tunes(props) {
           </div>
         </div>
         <div className={styles.card}>
-          <img src="/luffy.png"></img>
+          <img src="/Megumi.png"></img>
           <div className={styles.cardHeader}>
             <h4>LUFFY #34</h4>
+            <button className={{padding:"3px"}} >
+            Follow 
+          </button>
             <ImStarEmpty size={25} />
           </div>
           <h5>PIRATE KING FLOW</h5>
