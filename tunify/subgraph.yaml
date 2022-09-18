@@ -1,0 +1,36 @@
+specVersion: 0.0.4
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: Tunify
+    network: mumbai
+    source:
+      address: "0x2D223dD49EA808beC0d5E8583c19ac447B5589Bd"
+      abi: Tunify
+      startBlock: 28165519
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - followArtiste
+        - songAddedToAlbum
+        - songLiked
+        - songUploaded
+        - userRegistered
+      abis:
+        - name: Tunify
+          file: ./abis/Tunify.json
+      eventHandlers:
+        - event: followArtiste(uint256,uint256,uint256)
+          handler: handlefollowArtiste
+        - event: songAddedToAlbum(uint256,uint256,string,uint256)
+          handler: handlesongAddedToAlbum
+        - event: songLiked(uint256,uint256,uint256,string)
+          handler: handlesongLiked
+        - event: songUploaded(uint256,uint256,string,string,string,uint256,address,string,uint256,uint256,string,uint256)
+          handler: handlesongUploaded
+        - event: userRegistered(uint256,string,address,string,string,uint256,uint256,uint256)
+          handler: handleuserRegistered
+      file: ./src/tunify.ts
