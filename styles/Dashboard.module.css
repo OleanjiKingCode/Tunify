@@ -1,0 +1,51 @@
+.dashHome{
+    padding: 1rem 3rem;
+}
+
+.head{
+    margin-bottom: 5rem;
+}
+
+.head h1{
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    background: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 1px solid #43e97b;
+}
+
+.discover{
+    padding-bottom: 10px;
+    display: flex;
+    justify-content:space-around;
+}
+
+.library h4{
+    padding: 1rem;
+    border-bottom: 1px solid white;
+}
+
+.songs{
+    display: flex;
+    align-items: center;
+}
+
+.songs p{
+    margin: 1.5rem;
+}
+
+.uploads h4{
+    padding: 1rem;
+    border-bottom: 1px solid white;
+}
+
+@media screen and (max-width:1040px) {
+    .discover{
+        flex-direction: column;
+    }
+
+    .library{
+        margin-bottom: 2rem;
+    }
+}

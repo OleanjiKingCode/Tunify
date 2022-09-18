@@ -1,0 +1,128 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 3rem;
+}
+
+.logo{
+    
+    display:flex;
+    font-family:"paperclip";
+    cursor: pointer;
+    /* font-family:"rubik"; */
+    font-size: 1.4rem;
+    background: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.logoImg{
+    margin-right: 0.5rem;
+    width:8rem; 
+    height:8rem;
+    animation: start-rotate 1.5s linear infinite;
+}
+
+/* @keyframes start-rotate {
+    100%{
+        transform: rotate(360deg);
+    }
+} */
+
+.headerLinks{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "rubik";
+    font-weight: bolder;
+    /* font-family:"failure"; */
+    /* font-weight: 1000; */
+}
+
+.headerLinks p{
+    border-bottom: 1px solid white;
+}
+
+.headerLinks>p{
+    margin: 1.7rem;
+    padding: 1rem;
+    cursor: pointer;
+    /* border-bottom: 1px solid black;
+    border-radius: 10px; */
+}
+
+.button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 10px;
+}
+
+.button button {
+    /* font-family:"failure"; */
+    padding: 1rem 2rem;
+    background-color: white;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.menuLine{
+    display: none;
+    margin-left: 1rem;
+}
+
+.closeDiv{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.burgerNav{
+    position: fixed;
+    top:0;
+    bottom:0;
+    right:0;
+    background: black;
+    color:white;
+    width: 300px;
+    z-index:2;
+    padding: 5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    justify-content: flex-start;
+}
+
+.burgerNav p{
+    padding: 1rem 0;
+    border-bottom: 1px solid white;
+    font-weight: 600;
+    font-family: 'rubik';
+}
+
+.burgerBtn{
+    display: none;
+}
+
+@media screen and (max-width: 1030px) {
+    .headerLinks{
+        display: none;
+    }
+
+    .menuLine{
+        display: initial;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .button button{
+        display: none;
+    }
+
+    .burgerBtn{
+        display: initial;
+    }
+}

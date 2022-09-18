@@ -4,6 +4,81 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  /* background: linear-gradient(to top, #f9f047 0%, #0fd850 100%); */
+  /* background: linear-gradient(to top, #f9f047 0%, #61DE2A 100%); */
+  /* background-image: linear-gradient(to right, #434343 0%, black 100%); */
+  /* background-image: linear-gradient(60deg, #29323c 0%, #485563 100%); */
+  /* background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+ background-blend-mode: multiply; */
+ 
+  background-color: black;
+  color: white;
+  scroll-behavior: smooth;
+  /* background-color: #61DE2A; */
+}
+
+@font-face {
+  font-family: "Typewriter";
+  src: url('../font/Courier\ M\ W10\ Bold.ttf');
+  font-weight: normal;
+}
+
+
+@font-face {
+  font-family: "Toxic";
+  src: url('../font/SNOT____.TTF');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Neon";
+  src: url('../font/neonledlight.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Kab";
+  src: url('../font/KABLOOIE.TTF');
+  font-weight: normal;
+}
+
+
+@font-face {
+  font-family: "Droopy";
+  src: url('../font/GooeyDrippySticky.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Failure";
+  src: url('../font/FAILURE_.TTF');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "RubikLight";
+  src: url('../font/Rubik-Light.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url('../font/Rubik-Regular.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Atlas";
+  src: url('../font/ATLAS___.TTF');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Paperclip";
+  src: url('../font/Papercli.ttf');
+  font-weight: normal;
+
 }
 
 a {
