@@ -1,7 +1,5 @@
 {
-
   "name": "spotify-dapp",
-
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,30 +9,28 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@rainbow-me/rainbowkit": "^0.6.0",
-    "ethers": "^5.7.1",
-    "framer-motion": "^7.2.1",
-    "next": "12.2.5",
-    "phaser": "^3.55.2",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-icons": "^4.4.0",
-    "wagmi": "^0.6.6",
+    "@arcana/auth": "^0.1.1",
+    "@lighthouse-web3/sdk": "^0.1.7",
     "@nomiclabs/hardhat-ethers": "^2.0.0",
     "@nomiclabs/hardhat-waffle": "^2.0.3",
     "@openzeppelin/contracts": "^4.7.3",
+    "@rainbow-me/rainbowkit": "^0.6.0",
     "chai": "^4.2.0",
     "dotenv": "^16.0.2",
     "ethereum-waffle": "^3.4.4",
     "ethers": "^5.4.7",
+    "framer-motion": "^7.2.1",
+    "graphql": "^16.6.0",
     "hardhat": "^2.11.1",
     "next": "12.3.0",
+    "phaser": "^3.55.2",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-icons": "^4.4.0",
+    "urql": "^3.0.3",
+    "wagmi": "^0.6.6"
   },
   "devDependencies": {
-    "eslint": "8.22.0",
-    "eslint-config-next": "12.2.5",
     "@ethersproject/abi": "^5.4.7",
     "@ethersproject/providers": "^5.4.7",
     "@nomicfoundation/hardhat-chai-matchers": "^1.0.0",

@@ -72,7 +72,6 @@ export function handlesongLiked(event: songLiked): void {
   }
 
   entity.Likes = event.params.noOfLikes;
-
   let user = User.load(event.params.userId.toString());
   // You have to be a user to be able to like a meme
   if(!user){
@@ -103,6 +102,7 @@ export function handlesongUploaded(event: songUploaded): void {
   entity.FileLink = event.params.songFile;
   entity.Date = event.params.dateUploaded;
   entity.Genre = event.params.genre;
+  entity.Price = event.params.price;
   entity.Likes = event.params.noOfLikes;
   entity.Stars = event.params.noOfStars;
   entity.OwnerId = event.params.artisteId;

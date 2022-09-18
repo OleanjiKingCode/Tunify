@@ -60,6 +60,15 @@ export class Song extends Entity {
     this.set("FileType", Value.fromString(value));
   }
 
+  get Price(): BigInt {
+    let value = this.get("Price");
+    return value!.toBigInt();
+  }
+
+  set Price(value: BigInt) {
+    this.set("Price", Value.fromBigInt(value));
+  }
+
   get Genre(): string {
     let value = this.get("Genre");
     return value!.toString();

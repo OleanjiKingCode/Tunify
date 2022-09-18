@@ -3,6 +3,7 @@ import styles from './Header.module.css'
 import Link from 'next/link'
 import {RiMenu3Line, RiCloseLine} from "react-icons/ri"
 import {motion} from 'framer-motion'
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 function Header() {
   const [toggleMenu, setToggleMenu] = useState(false)
@@ -39,7 +40,8 @@ function Header() {
                 <Link href="/Tunes"passHref><p>Tunes</p></Link>
                 <p>Albums</p>
                 <Link href="/Upload" passHref><p>Upload to Tunify</p></Link>
-                 <button className={styles.burgerBtn}>CONNECT</button>
+                 {/* <button className={styles.burgerBtn}>CONNECT</button> */}
+                 <ConnectButton />
                </motion.div>
         )}
  

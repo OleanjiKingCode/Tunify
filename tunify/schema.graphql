@@ -1,26 +1,27 @@
 type Song @entity {
   id: ID!
-  Name: String! 
+  Name: String!
   FileType: String!
-  Genre: String! 
-  OwnerId:BigInt!
+  Price: BigInt!
+  Genre: String!
+  OwnerId: BigInt!
   OwnerAddress: Bytes!
   FileLink: String!
   Stars: BigInt!
   Likes: BigInt!
   Date: String!
-  StarredAddresses:[Bytes!]
-  LikesAddresses:[Bytes!]
+  StarredAddresses: [Bytes!]
+  LikesAddresses: [Bytes!]
 }
 
 type User @entity {
   id: ID!
   Name: String!
   Email: String!
-  Adddress:Bytes!
+  Adddress: Bytes!
   TotalUploaded: BigInt!
   AlbumSongs: BigInt!
   Followers: BigInt!
-  FollowersAddresses:[Bytes!]
+  FollowersAddresses: [Bytes!]
   Date: String!
 }
