@@ -22,7 +22,7 @@ export default function Home() {
             <h1> A DECENTRALIZED MUSIC HOSTING AND STREAMING PLATFORM <FiMusic/></h1>
             <p>Creatives can Upload their Music and get paid monthly on every stream</p>
             <p>Click to the button below to get started</p>
-            <Link href="/Login" passHref><button>LEARN MORE</button></Link>
+            <Link href="/Login" passHref><button>GET STARTED</button></Link>
           </div>
           <div>
           <div className={styles.cardContainer}>
